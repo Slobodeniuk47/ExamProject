@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   backend:
-    container_name: WebApi
+    container_name: WebApi_1
     build:
       labels:
         com.microsoft.created-by: "visual-studio"

@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  backend:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+
+  client:
+    image: client
+    build:
+      context: ../../exam-front
+      dockerfile: Dockerfile
+
+  proxy:
+    image: nginx:mainline

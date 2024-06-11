@@ -3,7 +3,7 @@ version: '3.4'
 services:
   backend:
     image: webapi:dev
-    container_name: WebApi
+    container_name: WebApi_1
     build:
       target: base
       labels:
@@ -14,8 +14,8 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - D:\ExamShop\WebApi\WebApi:/app
-      - D:\ExamShop\WebApi:/src
+      - D:\ExamShop\Backend\WebApi\WebApi:/app
+      - D:\ExamShop\Backend\WebApi:/src
       - C:\Users\Asus F15\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\Asus F15\.nuget\packages\:/root/.nuget/packages:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

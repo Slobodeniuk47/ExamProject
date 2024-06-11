@@ -6,12 +6,3 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5000:80"
-  client:
-    ports:
-      - "5001:3000"
-
-  proxy:
-    volumes:
-      - ./nginx.conf:/etc/nginx.conf
-    ports:
-      - "80:80"

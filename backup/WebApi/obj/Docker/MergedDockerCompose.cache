@@ -1,0 +1,46 @@
+name: dockercompose2783552714846617664
+services:
+  backend:
+    build:
+      context: D:\ExamShop\Backend\WebApi
+      dockerfile: WebApi/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "5000"
+        protocol: tcp
+  client:
+    build:
+      context: D:\ExamShop\exam-front
+      dockerfile: Dockerfile
+    image: client
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 3006
+        published: "5001"
+        protocol: tcp
+  proxy:
+    image: nginx:mainline
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "80"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: D:\ExamShop\Backend\WebApi\nginx.conf
+        target: /etc/nginx.conf
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose2783552714846617664_default

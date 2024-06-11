@@ -6,12 +6,3 @@ services:
     build:
       context: .
       dockerfile: WebApi/Dockerfile
-
-  client:
-    image: client
-    build:
-      context: ../exam-front
-      dockerfile: Dockerfile
-
-  proxy:
-    image: nginx:mainline

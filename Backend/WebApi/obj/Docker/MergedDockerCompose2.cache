@@ -1,23 +1,26 @@
-name: dockercompose1062708286567786740
+name: dockercompose2783552714846617664
 services:
   backend:
     build:
-      context: D:\ExamShop\WebApi
+      context: D:\ExamShop\Backend\WebApi
       dockerfile: WebApi/Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: WebApi
-    container_name: WebApi
+      target: base
+    container_name: WebApi_1
     entrypoint:
       - tail
       - -f
       - /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-    image: webapi
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: ""
+    image: webapi:dev
     labels:
-      com.microsoft.visual-studio.project-name: WebApi
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/WebApi.dll"'
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/WebApi.dll"'
       com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
@@ -31,8 +34,24 @@ services:
     tty: true
     volumes:
       - type: bind
+        source: D:\ExamShop\Backend\WebApi\WebApi
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: D:\ExamShop\Backend\WebApi
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
         source: C:\Users\Asus F15\vsdbg\vs2017u5
         target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Asus F15\.nuget\packages\
+        target: /root/.nuget/packages
+        read_only: true
         bind:
           create_host_path: true
       - type: bind
@@ -53,33 +72,6 @@ services:
         read_only: true
         bind:
           create_host_path: true
-  client:
-    build:
-      context: D:\ExamShop\exam-front
-      dockerfile: Dockerfile
-    image: client
-    networks:
-      default: null
-    ports:
-      - mode: ingress
-        target: 3000
-        published: "5001"
-        protocol: tcp
-  proxy:
-    image: nginx:mainline
-    networks:
-      default: null
-    ports:
-      - mode: ingress
-        target: 80
-        published: "80"
-        protocol: tcp
-    volumes:
-      - type: bind
-        source: D:\ExamShop\WebApi\nginx.conf
-        target: /etc/nginx.conf
-        bind:
-          create_host_path: true
 networks:
   default:
-    name: dockercompose1062708286567786740_default
+    name: dockercompose2783552714846617664_default
