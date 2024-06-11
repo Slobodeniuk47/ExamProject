@@ -1,0 +1,14 @@
+D:\ExamShop\WebApi\bin\Debug\WebApi.deps.json
+D:\ExamShop\WebApi\bin\Debug\WebApi.runtimeconfig.json
+D:\ExamShop\WebApi\bin\Debug\appsettings.Development.json
+D:\ExamShop\WebApi\bin\Debug\appsettings.json
+D:\ExamShop\WebApi\bin\Debug\WebApi.exe
+D:\ExamShop\WebApi\bin\Debug\WebApi.dll
+D:\ExamShop\WebApi\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ExamShop\WebApi\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+D:\ExamShop\WebApi\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ExamShop\WebApi\bin\Debug\Microsoft.OpenApi.dll
+D:\ExamShop\WebApi\bin\Debug\WebApi.pdb
+D:\ExamShop\WebApi\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+D:\ExamShop\WebApi\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\ExamShop\WebApi\obj\Debug\docker-compose.dcproj.CopyComplete
