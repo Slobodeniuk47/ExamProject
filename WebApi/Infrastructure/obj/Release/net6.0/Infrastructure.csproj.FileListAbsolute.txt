@@ -1,0 +1,15 @@
+D:\ExamShop\WebAPi\Infrastructure\bin\Release\net6.0\Infrastructure.deps.json
+D:\ExamShop\WebAPi\Infrastructure\bin\Release\net6.0\Infrastructure.dll
+D:\ExamShop\WebAPi\Infrastructure\bin\Release\net6.0\Infrastructure.pdb
+D:\ExamShop\WebAPi\Infrastructure\bin\Release\net6.0\Data.dll
+D:\ExamShop\WebAPi\Infrastructure\bin\Release\net6.0\Data.pdb
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.csproj.AssemblyReference.cache
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.AssemblyInfoInputs.cache
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.AssemblyInfo.cs
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.csproj.CopyComplete
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.dll
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\refint\Infrastructure.dll
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\Infrastructure.pdb
+D:\ExamShop\WebAPi\Infrastructure\obj\Release\net6.0\ref\Infrastructure.dll

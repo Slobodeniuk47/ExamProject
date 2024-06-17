@@ -1,0 +1,61 @@
+name: dockercompose1062708286567786740
+services:
+  backend:
+    build:
+      context: D:\ExamShop\WebApi
+      dockerfile: WebApi/Dockerfile
+    container_name: my-app-conainer
+    depends_on:
+      postgres_db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapi
+    networks:
+      myAppNetwork: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "5000"
+        protocol: tcp
+  client:
+    build:
+      context: D:\ExamShop\exam-front
+      dockerfile: Dockerfile
+    image: client
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 3000
+        published: "5001"
+        protocol: tcp
+  postgres_db:
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: temp-db1
+      POSTGRES_PASSWORD: Hgfpbp31
+      POSTGRES_USER: azure_admin
+    image: postgres:16
+    networks:
+      myAppNetwork: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: postgres-data
+        target: /var/lib/postgresql/data
+        volume: {}
+networks:
+  default:
+    name: dockercompose1062708286567786740_default
+  myAppNetwork:
+    name: dockercompose1062708286567786740_myAppNetwork
+    driver: bridge
+volumes:
+  postgres-data:
+    name: dockercompose1062708286567786740_postgres-data

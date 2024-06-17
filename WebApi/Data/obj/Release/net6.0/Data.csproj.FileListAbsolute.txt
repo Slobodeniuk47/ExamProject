@@ -1,0 +1,14 @@
+D:\ExamShop\WebAPi\Data\bin\Release\net6.0\Data.deps.json
+D:\ExamShop\WebAPi\Data\bin\Release\net6.0\Data.dll
+D:\ExamShop\WebAPi\Data\bin\Release\net6.0\Data.pdb
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.csproj.AssemblyReference.cache
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.AssemblyInfoInputs.cache
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.AssemblyInfo.cs
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.csproj.CoreCompileInputs.cache
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.dll
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\refint\Data.dll
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.pdb
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\ref\Data.dll
+D:\ExamShop\WebAPi\Data\bin\Release\net6.0\Data.runtimeconfig.json
+D:\ExamShop\WebAPi\Data\obj\Release\net6.0\Data.genruntimeconfig.cache
